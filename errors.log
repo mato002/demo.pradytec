@@ -1,0 +1,30 @@
+[23-Feb-2026 12:25:16 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'mfi_core.config' doesn't exist in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:1771
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(1771): mysqli_query(Object(mysqli), 'SELECT *FROM `c...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\index.php(5): mficlient()
+#2 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 1771
+[23-Feb-2026 12:25:28 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'mfi_core.config' doesn't exist in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:1771
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(1771): mysqli_query(Object(mysqli), 'SELECT *FROM `c...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\index.php(5): mficlient()
+#2 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 1771
+[23-Feb-2026 14:20:09 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'mfi_core.config' doesn't exist in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:1771
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(1771): mysqli_query(Object(mysqli), 'SELECT *FROM `c...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\index.php(5): mficlient()
+#2 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 1771
+[23-Feb-2026 14:20:11 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'mfi_core.config' doesn't exist in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:1771
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(1771): mysqli_query(Object(mysqli), 'SELECT *FROM `c...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\index.php(5): mficlient()
+#2 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 1771
+[23-Feb-2026 15:35:14 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'mfi_core.config' doesn't exist in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:1772
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(1772): mysqli_query(Object(mysqli), 'SELECT *FROM `c...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\index.php(5): mficlient()
+#2 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 1772

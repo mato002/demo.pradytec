@@ -1,0 +1,58 @@
+[12-Apr-2024 18:51:14 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[12-Apr-2024 18:51:14 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[12-Apr-2024 18:51:14 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[12-Apr-2024 18:56:05 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[12-Apr-2024 18:56:05 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[12-Apr-2024 18:56:05 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[12-Apr-2024 19:01:07 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[12-Apr-2024 19:01:07 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[12-Apr-2024 19:01:07 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[12-Apr-2024 19:03:33 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[12-Apr-2024 19:03:33 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[12-Apr-2024 19:03:33 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 10:56:37 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 10:56:37 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 10:56:37 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 10:59:31 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 10:59:31 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 10:59:31 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 11:11:45 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 11:11:45 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 11:11:45 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 11:26:37 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 11:26:37 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 11:26:37 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 11:34:06 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 11:34:06 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 11:34:06 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 11:38:28 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 11:38:28 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 11:38:28 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 12:15:34 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 12:15:34 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 12:15:34 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 14:01:48 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 14:01:48 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 14:01:48 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 14:06:09 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 14:06:09 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 14:06:09 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 14:09:57 Africa/Nairobi] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1167
+[13-Apr-2024 14:09:57 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1185
+[13-Apr-2024 14:09:57 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/app/init.php on line 20
+[13-Apr-2024 19:36:17 Africa/Nairobi] PHP Deprecated:  Invalid characters passed for attempted conversion, these have been ignored in /home/emptyjou/demo.pradytec.com/app/index.php on line 21
+[13-Apr-2024 19:36:17 Africa/Nairobi] PHP Warning:  hash_equals(): Expected user_string to be a string, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1597
+[13-Apr-2024 19:36:29 Africa/Nairobi] PHP Deprecated:  Invalid characters passed for attempted conversion, these have been ignored in /home/emptyjou/demo.pradytec.com/app/index.php on line 21
+[13-Apr-2024 19:36:29 Africa/Nairobi] PHP Warning:  hash_equals(): Expected user_string to be a string, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1597
+[13-Apr-2024 19:38:33 Africa/Nairobi] PHP Deprecated:  Invalid characters passed for attempted conversion, these have been ignored in /home/emptyjou/demo.pradytec.com/app/index.php on line 21
+[13-Apr-2024 19:38:33 Africa/Nairobi] PHP Warning:  hash_equals(): Expected user_string to be a string, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1597
+[13-Apr-2024 19:40:24 Africa/Nairobi] PHP Deprecated:  Invalid characters passed for attempted conversion, these have been ignored in /home/emptyjou/demo.pradytec.com/app/index.php on line 21
+[13-Apr-2024 19:40:24 Africa/Nairobi] PHP Warning:  hash_equals(): Expected user_string to be a string, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1597
+[13-Apr-2024 19:40:28 Africa/Nairobi] PHP Deprecated:  Invalid characters passed for attempted conversion, these have been ignored in /home/emptyjou/demo.pradytec.com/app/index.php on line 21
+[13-Apr-2024 19:40:28 Africa/Nairobi] PHP Warning:  hash_equals(): Expected user_string to be a string, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1597
+[13-Apr-2024 19:40:33 Africa/Nairobi] PHP Deprecated:  Invalid characters passed for attempted conversion, these have been ignored in /home/emptyjou/demo.pradytec.com/app/index.php on line 21
+[13-Apr-2024 19:40:33 Africa/Nairobi] PHP Warning:  hash_equals(): Expected user_string to be a string, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1597
+[13-Apr-2024 19:51:07 Africa/Nairobi] PHP Deprecated:  Invalid characters passed for attempted conversion, these have been ignored in /home/emptyjou/demo.pradytec.com/app/index.php on line 21
+[13-Apr-2024 19:51:07 Africa/Nairobi] PHP Warning:  hash_equals(): Expected user_string to be a string, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1597
+[13-Apr-2024 19:51:12 Africa/Nairobi] PHP Deprecated:  Invalid characters passed for attempted conversion, these have been ignored in /home/emptyjou/demo.pradytec.com/app/index.php on line 21
+[13-Apr-2024 19:51:12 Africa/Nairobi] PHP Warning:  hash_equals(): Expected user_string to be a string, bool given in /home/emptyjou/demo.pradytec.com/core/functions.php on line 1597

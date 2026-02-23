@@ -1,0 +1,138 @@
+[21-Mar-2025 10:38:36 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[21-Mar-2025 10:38:36 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[21-Mar-2025 10:38:36 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[21-Mar-2025 10:38:36 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[21-Mar-2025 10:38:36 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[21-Mar-2025 10:38:36 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[08-Apr-2025 09:24:07 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[08-Apr-2025 09:24:07 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[08-Apr-2025 09:24:07 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[08-Apr-2025 09:24:07 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[08-Apr-2025 09:24:07 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[08-Apr-2025 09:24:07 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[08-Apr-2025 09:24:07 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[08-Apr-2025 09:24:07 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[08-Apr-2025 21:15:38 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[08-Apr-2025 21:15:38 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[08-Apr-2025 21:15:38 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[08-Apr-2025 21:15:38 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[08-Apr-2025 21:15:38 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[08-Apr-2025 21:15:38 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[08-Apr-2025 21:15:38 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[08-Apr-2025 21:15:38 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[25-Apr-2025 15:15:03 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[19-May-2025 17:00:59 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[19-May-2025 17:00:59 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[19-May-2025 17:00:59 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[19-May-2025 17:00:59 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[19-May-2025 17:17:34 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[19-May-2025 17:17:34 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[19-May-2025 17:17:34 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[19-May-2025 17:17:34 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[19-Aug-2025 15:08:20 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[19-Aug-2025 15:08:20 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[19-Aug-2025 15:08:20 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[19-Aug-2025 15:08:20 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 16:35:40 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 16:36:37 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[04-Sep-2025 16:36:37 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[04-Sep-2025 16:36:37 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[04-Sep-2025 16:36:37 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[04-Sep-2025 16:36:37 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[04-Sep-2025 16:36:37 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 300
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Notice:  Undefined index: cuts in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 707
+[04-Sep-2025 21:42:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/payroll.php on line 708
+[09-Sep-2025 16:07:02 Africa/Nairobi] PHP Notice:  Undefined offset: 57 in /home/emptyjou/demo.pradytec.com/mfs/accounts/utilities.php on line 397
+[30-Sep-2025 13:02:58 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[30-Sep-2025 13:02:58 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[30-Sep-2025 13:02:58 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[30-Sep-2025 13:02:58 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[30-Sep-2025 13:13:20 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[30-Sep-2025 13:13:20 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 269
+[30-Sep-2025 13:13:20 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[30-Sep-2025 13:13:20 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 274
+[15-Oct-2025 09:15:15 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 200
+[15-Oct-2025 09:15:15 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 196
+[15-Oct-2025 09:16:18 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 200
+[15-Oct-2025 09:16:18 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 196
+[15-Oct-2025 09:18:11 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 200
+[15-Oct-2025 09:18:11 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 196
+[29-Oct-2025 13:58:24 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 288
+[29-Oct-2025 13:58:24 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 288
+[29-Oct-2025 13:58:24 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 293
+[29-Oct-2025 13:58:24 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 293
+[31-Oct-2025 04:26:05 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 288
+[31-Oct-2025 04:26:05 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 288
+[31-Oct-2025 04:26:05 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 293
+[31-Oct-2025 04:26:05 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 293
+[01-Nov-2025 00:46:24 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[01-Nov-2025 00:46:24 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[01-Nov-2025 00:49:18 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[01-Nov-2025 00:49:18 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[03-Nov-2025 15:54:13 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 288
+[03-Nov-2025 15:54:13 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 288
+[03-Nov-2025 15:54:13 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 293
+[03-Nov-2025 15:54:13 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 293
+[08-Nov-2025 11:21:42 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[08-Nov-2025 11:21:42 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[11-Nov-2025 10:06:33 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[11-Nov-2025 10:06:33 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[17-Nov-2025 16:24:50 Africa/Nairobi] PHP Notice:  Undefined offset: 4 in /home/emptyjou/demo.pradytec.com/mfs/accounts/cashbook.php on line 192
+[07-Dec-2025 08:53:03 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[07-Dec-2025 08:53:03 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[12-Dec-2025 10:40:48 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[12-Dec-2025 10:40:48 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[17-Dec-2025 13:14:19 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[17-Dec-2025 13:14:19 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[20-Dec-2025 12:31:43 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[20-Dec-2025 12:31:43 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[20-Dec-2025 13:39:45 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[20-Dec-2025 13:39:45 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[20-Dec-2025 13:41:31 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[20-Dec-2025 13:41:31 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[24-Dec-2025 09:00:47 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[24-Dec-2025 09:00:47 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[29-Dec-2025 16:10:24 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[29-Dec-2025 16:10:24 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[29-Dec-2025 17:56:31 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[29-Dec-2025 17:56:31 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[29-Dec-2025 17:58:06 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[29-Dec-2025 17:58:06 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[29-Dec-2025 17:58:29 Africa/Nairobi] PHP Notice:  Undefined offset: 6 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 219
+[29-Dec-2025 17:58:29 Africa/Nairobi] PHP Notice:  Undefined offset: 11 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 215
+[06-Jan-2026 13:12:50 Africa/Nairobi] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 288
+[06-Jan-2026 13:12:50 Africa/Nairobi] PHP Warning:  Invalid argument supplied for foreach() in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 288
+[06-Jan-2026 13:12:50 Africa/Nairobi] PHP Notice:  String offset cast occurred in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 293
+[06-Jan-2026 13:12:50 Africa/Nairobi] PHP Notice:  Uninitialized string offset: 1 in /home/emptyjou/demo.pradytec.com/mfs/accounts/b2capp.php on line 293

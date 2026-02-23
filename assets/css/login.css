@@ -1,0 +1,27 @@
+	
+	@import "theme.css";
+	
+	/* Theme 1 */
+	.main1 ::placeholder{color:var(--pcolor);}
+	.contents1{font-family:signika negative;padding:12px;max-width:360px;margin:0 auto;}
+	.main1{ height:auto;max-width:400px;margin:0 auto;box-shadow:0px 1px 4px rgba(0,0,0,0.2);background:var(--opcolor);min-height:200px;border-radius:4px;padding:10px 0px;width:95%;}
+	.main1 input[type=text],.main1 input[type=password],.main1 input[type=number]{padding:10px 0px;width:100%;border:0px;border-bottom:1px solid #4682b4;
+	font-family:signika negative;color:#191970;font-size:16px; }
+	.main1 input:focus{ outline:none; border-bottom:2px solid var(--pcolor); }
+	.contents1 .progbtn{background:#ADD8E6;padding:9px;text-align:center;border-radius:3px;cursor:not-allowed;color:#191970;font-size:14px;display:none;}
+	.contents1 .btn1{width:100%;padding:7px;background:var(--pcolor); color:#fff;outline:none;border:1px solid var(--pcolor);border-radius:4px;}
+	.contents1 .btn1:focus{outline:none;color:yellow;}
+	
+	/* Theme 2 */
+	.main2 ::placeholder{color:#dcdcdc;}
+	.main2 a{color:var(--scolor);}
+	.main2{ max-width:500px;margin:0 auto;background:var(--opcolor);min-height:200px;padding:10px;color:#f0f0f0;border-radius:5px; }
+	.main2 input[type=text],.main2 input[type=password],.main2 input[type=number]{padding:7px 10px;width:100%;border:1px solid #dcdcdc;background:rgba(255,255,204,.2);border-radius:5px;
+	font-family:signika negative;color:var(--scolor);font-size:16px; }
+	.main2 input:focus{ outline:none; border:1px solid var(--scolor); }
+	.contents2{ padding:5px;max-width:360px;margin:0 auto; }
+	.contents2 .progbtn{background:#ADD8E6;padding:9px;text-align:center;border-radius:3px;cursor:not-allowed;color:#191970;font-size:14px;display:none;}
+	.contents2 .btn1{width:100%;padding:7px;background:var(--scolor); color:var(--pcolor);outline:none;border:1px solid var(--pcolor);border-radius:4px;}
+	.contents2 .btn1:focus{outline:none;color:blue;}
+	@media screen and (min-width:601px){.logo{max-width:100%;max-height:250px; }}
+	@media screen and (max-width:600px){.logo{max-width:100%;max-height:150px; }}
