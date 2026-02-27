@@ -417,10 +417,10 @@
 			if($grp==0){
 				# default clients
 				$title = $grups[$grp]; $tdh="<td>Balance</td><td>Days</td>"; $thv="stbl"; $tdy=strtotime(date("Y-M-d"));
-				$qry = $db->query(2,"SELECT ln.client FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan 
+				$qry = $db->query(2,"SELECT ln.client FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.id=sd.loan 
 				WHERE ln.balance>0 $cond AND sd.balance>0 AND ln.expiry<$tdy GROUP BY sd.loan ORDER BY ln.client ASC");
 				$res = $db->query(2,"SELECT ln.client,ln.client_idno,ln.phone,ln.loan_officer,ln.balance,ln.expiry FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd 
-				ON ln.loan=sd.loan WHERE ln.balance>0 $cond AND sd.balance>0 AND ln.expiry<$tdy GROUP BY sd.loan ORDER BY ln.expiry DESC,ln.client ASC $lim");
+				ON ln.id=sd.loan WHERE ln.balance>0 $cond AND sd.balance>0 AND ln.expiry<$tdy GROUP BY sd.loan ORDER BY ln.expiry DESC,ln.client ASC $lim");
 				
 				$totals = ($qry) ? count($qry):0; $trs=""; $no=($perpage*$page)-$perpage;
 				if($res){
@@ -436,9 +436,9 @@
 				# weekdays groups
 				$title = $grups[$grp]; $tdh="<td>Balance</td>"; $thv="stbl";
 				$qry = $db->query(2,"SELECT ln.client,from_unixtime(sd.day,'%W') AS dow FROM `$ltbl` AS ln 
-				INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan WHERE ln.balance>0 $cond  GROUP BY sd.loan,dow HAVING dow LIKE '".$grups[$grp]."'");
+				INNER JOIN `$stbl` AS sd ON ln.id=sd.loan WHERE ln.balance>0 $cond  GROUP BY sd.loan,dow HAVING dow LIKE '".$grups[$grp]."'");
 				$res = $db->query(2,"SELECT ln.client,ln.client_idno,ln.phone,ln.loan_officer,ln.balance,from_unixtime(sd.day,'%W') AS dow FROM `$ltbl` AS ln 
-				INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan WHERE ln.balance>0 $cond  GROUP BY sd.loan,dow HAVING dow LIKE '".$grups[$grp]."' ORDER BY ln.client ASC $lim");
+				INNER JOIN `$stbl` AS sd ON ln.id=sd.loan WHERE ln.balance>0 $cond  GROUP BY sd.loan,dow HAVING dow LIKE '".$grups[$grp]."' ORDER BY ln.client ASC $lim");
 				
 				$totals = ($qry) ? count($qry):0; $trs=""; $no=($perpage*$page)-$perpage;
 				if($res){

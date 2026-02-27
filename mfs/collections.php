@@ -213,7 +213,7 @@
 			foreach($res as $rw){
 				$def = $rw[$cfield]; $today=strtotime(date("Y-M-d"));  
 				$sq1 = $db->query(2,"SELECT SUM(amount) AS tln,SUM(paid+balance) AS tsum FROM `$ltbl` AS ln WHERE `$cfield`='$def' AND `disbursement` BETWEEN $mon AND $dto $cond");
-				$sq2 = $db->query(2,"SELECT SUM(sd.balance) AS tarr FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 AND ln.disbursement 
+				$sq2 = $db->query(2,"SELECT SUM(sd.balance) AS tarr FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.id=sd.loan WHERE sd.balance>0 AND ln.disbursement 
 				BETWEEN $mon AND $dto AND sd.day<$today AND $cfield='$def' $cond");
 				$fork->add(2,"SELECT SUM(pr.amount) AS tsum,SUM((CASE WHEN (pr.day<=ln.expiry) THEN pr.amount ELSE 0 END)) AS otc,SUM((CASE WHEN (pr.day BETWEEN ln.expiry+(1) 
 				AND ln.expiry+(604800)) THEN pr.amount ELSE 0 END)) AS dd7,SUM((CASE WHEN (pr.day>ln.expiry+(604800)) THEN pr.amount ELSE 0 END)) AS cg7 FROM `$ltbl` AS ln STRAIGHT_JOIN 
@@ -379,7 +379,7 @@
 		
 		if($me['access_level']=="branch" or $bran){
 			$opts = "<option value='0'>-- Portfolio --</option>"; $mb=($bran) ? $bran:$me['branch'];
-			$res = $db->query(2,"SELECT DISTINCT st.officer FROM `$stbl` AS st INNER JOIN `$ltbl` AS ln ON ln.loan=st.loan WHERE st.day BETWEEN $fro AND $dto AND ln.branch='$mb'");
+			$res = $db->query(2,"SELECT DISTINCT st.officer FROM `$stbl` AS st INNER JOIN `$ltbl` AS ln ON ln.id=st.loan WHERE st.day BETWEEN $fro AND $dto AND ln.branch='$mb'");
 			if($res){
 				foreach($res as $row){
 					$off=$row['officer']; $cnd=($stid==$off) ? "selected":"";
@@ -502,7 +502,7 @@
 		
 		if($me['access_level']=="branch" or $bran){
 			$opts = "<option value='0'>-- Portfolio --</option>"; $mb=($bran) ? $bran:$me['branch'];
-			$res = $db->query(2,"SELECT DISTINCT st.officer FROM `$stbl` AS st INNER JOIN `org".$cid."_loans` AS ln ON ln.loan=st.loan WHERE st.day='$day' 
+			$res = $db->query(2,"SELECT DISTINCT st.officer FROM `$stbl` AS st INNER JOIN `org".$cid."_loans` AS ln ON ln.id=st.loan WHERE st.day='$day' 
 			AND ln.balance>0 AND ln.branch='$mb'");
 			if($res){
 				foreach($res as $row){

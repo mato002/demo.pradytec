@@ -380,13 +380,13 @@
 		}
 		
 		if($view==null){
-			$check = $db->query(2,"SELECT *FROM `$ltbl` WHERE `status`<9 AND `disbursement`='0'");
+			$check = ($db->istable(2,$ltbl)) ? $db->query(2,"SELECT *FROM `$ltbl` WHERE `status`<9 AND `disbursement`='0'"):null;
 			$view = ($check) ? 2:1;
 		}
 		
 		$states = array("All Applications","Disbursed Applications","Undisbursed Applications","Pended Applications","Declined Applications");
 		if($bran){ $me['access_level']="branch"; $me['branch']=$bran; }
-		$show = ($me['access_level']=="hq") ? 1:"`branch`='".$me['branch']."'";
+		$show = ($me['access_level']=="hq") ? 1:"`branch`='".$me['branch']."'"; 
 		$cond = $defc =($me['access_level']=="portfolio") ? "`stid`='$sid'":$show;
 		$cond.= ($str) ? " AND (`staff` LIKE '%$str%' OR `phone` LIKE '$str%')":"";
 		$defc.= ($str) ? " AND (`staff` LIKE '%$str%' OR `phone` LIKE '$str%')":"";
@@ -397,7 +397,7 @@
 		$defc .= ($view==3) ? " AND `pref`='8'":"";
 		$defc .= ($view==4) ? " AND `status`='9'":"";
 		
-		$qri = $db->query(2,"SELECT from_unixtime($cfield,'%Y-%b') AS mon FROM `$ltbl` WHERE $defc GROUP BY mon");
+		$qri = ($db->istable(2,$ltbl)) ? $db->query(2,"SELECT from_unixtime($cfield,'%Y-%b') AS mon FROM `$ltbl` WHERE $defc GROUP BY mon"):null;
 		$res = ($qri) ? $qri:array(["mon"=>date("Y-M")]); $mons=$days=[];
 		foreach($res as $row){
 			$mons[] = strtotime($row['mon']);
@@ -410,7 +410,7 @@
 		}
 		
 		$trange = monrange(date("m",$mon),date('Y',$mon)); $m1=$trange[0]; $m2=$trange[1]; $m2+=86399;
-		$res = $db->query(2,"SELECT from_unixtime($cfield,'%Y-%b-%d') AS day FROM `$ltbl` WHERE $defc AND $cfield BETWEEN $m1 AND $m2 GROUP BY day");
+		$res = ($db->istable(2,$ltbl)) ? $db->query(2,"SELECT from_unixtime($cfield,'%Y-%b-%d') AS day FROM `$ltbl` WHERE $defc AND $cfield BETWEEN $m1 AND $m2 GROUP BY day"):null;
 		if($res){
 			foreach($res as $row){ $days[] = strtotime($row['day']); }
 		}
@@ -566,7 +566,7 @@
 			$brans = "<select style='width:140px;font-size:15px;cursor:pointer' onchange=\"loadpage('hr/loans.php?apps=$view&bran='+this.value.trim())\">$brns</select>";
 		}
 		
-		$sql = $db->query(2,"SELECT COUNT(*) AS total,SUM(amount) AS tsum FROM `$ltbl` WHERE $cond");
+		$sql = ($db->istable(2,$ltbl)) ? $db->query(2,"SELECT COUNT(*) AS total,SUM(amount) AS tsum FROM `$ltbl` WHERE $cond"):null;
 		$totals = ($sql) ? intval($sql[0]['total']):0; $tsum=($sql) ? number_format(intval($sql[0]['tsum'])):0; 
 		
 		$disb = ($dis && in_array("disburse loans",$perms) && $sett["multidisburse"]) ? "<button class='bts' style='padding:4px;float:right;font-size:13px;margin-left:5px' 

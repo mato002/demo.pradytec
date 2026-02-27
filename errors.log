@@ -28,3 +28,48 @@ Stack trace:
 #1 C:\xampp\htdocs\mfs\demo.pradtec\index.php(5): mficlient()
 #2 {main}
   thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 1772
+[27-Feb-2026 11:10:35 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'emptyjou_coreuser'@'localhost' (using password: YES) in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:2523
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(2523): mysqli_connect('localhost', 'emptyjou_coreus...', Object(SensitiveParameterValue), 'emptyjou_mficor...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(1771): DBO->mysqlcon(1)
+#2 C:\xampp\htdocs\mfs\demo.pradtec\index.php(10): mficlient()
+#3 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 2523
+[27-Feb-2026 11:18:42 Africa/Nairobi] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 3143
+[27-Feb-2026 13:14:01 Africa/Nairobi] PHP Warning:  Undefined array key "HTTP_HOST" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 7
+[27-Feb-2026 13:14:01 Africa/Nairobi] PHP Warning:  Undefined array key "HTTP_HOST" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 7
+[27-Feb-2026 13:14:01 Africa/Nairobi] PHP Warning:  Undefined array key "SERVER_NAME" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 7
+[27-Feb-2026 13:14:01 Africa/Nairobi] PHP Warning:  Undefined array key "SERVER_NAME" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 7
+[27-Feb-2026 13:14:01 Africa/Nairobi] PHP Warning:  Undefined array key "HTTP_HOST" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 8
+[27-Feb-2026 13:14:01 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'emptyjou_defuser'@'localhost' (using password: YES) in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:2613
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(2613): mysqli_connect('localhost', 'emptyjou_defuse...', Object(SensitiveParameterValue), 'emptyjou_mfidef...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(2529): DBO->query(2, 'SELECT * FROM I...')
+#2 C:\xampp\htdocs\mfs\demo.pradtec\check_tables.php(9): DBO->istable(2, 'org4_loans')
+#3 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 2613
+[27-Feb-2026 13:24:08 Africa/Nairobi] PHP Warning:  Undefined array key "HTTP_HOST" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 7
+[27-Feb-2026 13:24:08 Africa/Nairobi] PHP Warning:  Undefined array key "HTTP_HOST" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 7
+[27-Feb-2026 13:24:08 Africa/Nairobi] PHP Warning:  Undefined array key "SERVER_NAME" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 7
+[27-Feb-2026 13:24:08 Africa/Nairobi] PHP Warning:  Undefined array key "SERVER_NAME" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 7
+[27-Feb-2026 13:24:08 Africa/Nairobi] PHP Warning:  Undefined array key "HTTP_HOST" in C:\xampp\htdocs\mfs\demo.pradtec\core\constants.php on line 8
+[27-Feb-2026 13:24:08 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'emptyjou_defuser'@'localhost' (using password: YES) in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:2613
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(2613): mysqli_connect('localhost', 'emptyjou_defuse...', Object(SensitiveParameterValue), 'emptyjou_mfidef...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(2529): DBO->query(2, 'SELECT * FROM I...')
+#2 C:\xampp\htdocs\mfs\demo.pradtec\install_tables.php(17): DBO->istable(2, 'org4_staff')
+#3 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 2613
+[27-Feb-2026 16:12:47 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'name' in 'where clause' in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:2615
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(2615): mysqli_query(Object(mysqli), 'SELECT *FROM `b...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\create_admin.php(31): DBO->query(1, 'SELECT *FROM `b...')
+#2 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 2615
+[27-Feb-2026 16:13:07 Africa/Nairobi] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' at line 3 in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php:2587
+Stack trace:
+#0 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(2587): mysqli_query(Object(mysqli), 'INSERT INTO `or...')
+#1 C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php(2607): DBO->insert(2, 'INSERT INTO `or...')
+#2 C:\xampp\htdocs\mfs\demo.pradtec\create_admin.php(45): DBO->execute(2, 'INSERT INTO `or...', Array)
+#3 {main}
+  thrown in C:\xampp\htdocs\mfs\demo.pradtec\core\functions.php on line 2587

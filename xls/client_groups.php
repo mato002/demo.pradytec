@@ -44,7 +44,7 @@
 				# default clients
 				$tdy=strtotime(date("Y-M-d")); $trs=[]; $no=0;
 				$res = $db->query(2,"SELECT ln.client,ln.client_idno,ln.phone,ln.loan_officer,ln.balance,ln.expiry FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd 
-				ON ln.loan=sd.loan WHERE ln.balance>0 $cond AND sd.balance>0 AND ln.expiry<$tdy GROUP BY sd.loan ORDER BY ln.expiry DESC,ln.client ASC $lim");
+				ON ln.id=sd.loan WHERE ln.balance>0 $cond AND sd.balance>0 AND ln.expiry<$tdy GROUP BY sd.loan ORDER BY ln.expiry DESC,ln.client ASC $lim");
 				
 				if($res){
 					foreach($res as $row){
@@ -59,7 +59,7 @@
 				# weekdays groups
 				$trs=[]; $no=0;
 				$res = $db->query(2,"SELECT ln.client,ln.client_idno,ln.phone,ln.loan_officer,ln.balance,from_unixtime(sd.day,'%W') AS dow FROM `$ltbl` AS ln 
-				INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan WHERE ln.balance>0 $cond  GROUP BY sd.loan,dow HAVING dow LIKE '".$grups[$grp]."' ORDER BY ln.client ASC");
+				INNER JOIN `$stbl` AS sd ON ln.id=sd.loan WHERE ln.balance>0 $cond  GROUP BY sd.loan,dow HAVING dow LIKE '".$grups[$grp]."' ORDER BY ln.client ASC $lim");
 				
 				if($res){
 					foreach($res as $row){

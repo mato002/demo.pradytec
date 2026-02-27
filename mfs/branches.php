@@ -144,7 +144,7 @@
 		$fsrc = prepare(ucwords($db->query($dbn,$from)[0]['name']));
 		
 		if($vtp=="perf"){
-			$res1 = $db->query(2,"SELECT DISTINCT sd.loan FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 AND ln.balance>0 AND sd.day<$tdy AND ln.$col='$val'");
+			$res1 = $db->query(2,"SELECT DISTINCT sd.loan FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.id=sd.loan WHERE sd.balance>0 AND ln.balance>0 AND sd.day<$tdy AND ln.$col='$val'");
 			if($res1){
 				foreach($res1 as $row){ $list[]=$row['loan']; }
 			}
@@ -164,7 +164,7 @@
 			</table><br>";
 		}
 		else{
-			$res = $db->query(2,"SELECT SUM(sd.balance) AS abal,ln.* FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan WHERE ln.$col='$val' AND ln.balance>0 
+			$res = $db->query(2,"SELECT SUM(sd.balance) AS abal,ln.* FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.id=sd.loan WHERE ln.$col='$val' AND ln.balance>0 
 			AND sd.balance>0 AND sd.day<$tdy GROUP BY sd.loan ORDER BY ln.client");
 			foreach($res as $row){
 				$name=prepare(ucwords($row['client'])); $arr=$row['abal']; $disb=date("d-m-Y",$row['disbursement']); $amnt=fnum($row['amount']);

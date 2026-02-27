@@ -264,8 +264,12 @@
 									echo (in_array("view sms templates",$roles)) ? '<li class="l2" onclick="loadpage(\'bulksms.php?templates\')">SMS Templates</li>':"";
 									echo (in_array("view sms logs",$roles)) ? '<li class="l2" onclick="loadpage(\'bulksms.php?logs\')">SMS Logs</li>':"";
 									echo (SMS_TOPUP) ? '<li class="l2" onclick="popupload(\'bulksms.php?topup\')">Topup Wallet</li>':"";
-									echo '<li class="l2" onclick="loadpage(\'bulksms.php?schedule\')">SMS Schedules</li>
-								</ol>';
+									echo '<li class="l2" onclick="loadpage(\'bulksms.php?schedule\')">SMS Schedules</li>';
+									// Add admin config link for HQ users with admin rights
+									if(in_array("admin", $perms) || $me['access_level'] == "hq"){
+										echo '<li class="l2" onclick="loadpage(\'admin/sms_config.php\')" style="color:#ff6b35;">⚙️ API Settings</li>';
+									}
+								echo '</ol>';
 							}
 							
 							if(in_array("view loan payments",$roles)){
@@ -386,7 +390,7 @@
 		}());
 		
 		function printdoc(url,pos){
-			var loc = (window.location.hostname=="localhost") ? "/mfs/":"/";
+			var loc = "/demo.pradtec/";
 			window.open(loc+"pdf/files/"+url+"&pos=<?php echo $sid; ?>",pos);
 		}
 		
@@ -403,7 +407,7 @@
 		function genreport(url,val){
 			if(val=="pdf"){ printdoc(url,"Printout"); }
 			if(val=="xls"){
-				var loc = (window.location.hostname=="localhost") ? "/mfs/":"/";
+				var loc = "/demo.pradtec/";
 				$.ajax({
 					method:"post",url:loc+"xls/"+url,data:{genxls:"<?php echo $sid; ?>"},
 					beforeSend:function(){progress("Generating...please wait");},
@@ -559,8 +563,8 @@
 		}
 		
 		function path(){
-			var base = (typeof MFS_BASE_PATH !== "undefined") ? MFS_BASE_PATH : ((window.location.hostname=="localhost") ? "/mfs" : "");
-			return base ? (base + "/mfs/") : "/mfs/";
+			var base = (typeof MFS_BASE_PATH !== "undefined") ? MFS_BASE_PATH : "/demo.pradtec";
+			return base ? (base + "/mfs/") : "/demo.pradtec/mfs/";
 		}
 		
 		function popupload(url){
@@ -574,7 +578,7 @@
 		function checknotification(){
 			var dt = new Date(); 
 			var hr = dt.getHours(), min=dt.getMinutes(), sec=dt.getSeconds(), chk=parseInt(hr+""+min+""+sec);
-			var go = (typeof MFS_BASE_PATH !== "undefined" && MFS_BASE_PATH) ? MFS_BASE_PATH : ((window.location.hostname=="localhost") ? "/mfs" : "/");
+			var go = (typeof MFS_BASE_PATH !== "undefined" && MFS_BASE_PATH) ? MFS_BASE_PATH : "/demo.pradtec";
 			
 			if(chk>=235945){ clearInterval(check); alert("Your session has expired,login again"); window.location.replace(go); }
 			else{
@@ -611,7 +615,7 @@
 		function timerIncrement(){
 			if(localStorage.getItem("ubr")!="dev"){
 				idleTime++;
-				var go = (typeof MFS_BASE_PATH !== "undefined" && MFS_BASE_PATH) ? MFS_BASE_PATH : ((window.location.hostname=="localhost") ? "/mfs" : "/");
+				var go = (typeof MFS_BASE_PATH !== "undefined" && MFS_BASE_PATH) ? MFS_BASE_PATH : "/demo.pradtec";
 				if(idleTime>29){ window.location.replace(go); }
 				if(idleTime==29){ toast("You have been Idle for 29 Minutes, the system will Logout in the next 1 Minute"); }
 			}
@@ -726,7 +730,7 @@
 	<?php	
 	}
 	else{
-		$root = ($_SERVER['HTTP_HOST']=="localhost") ? "/mfs":"/";
+		$root = "/demo.pradtec";
 		echo "<script>window.location.replace('$root')</script>";
 	}
 	

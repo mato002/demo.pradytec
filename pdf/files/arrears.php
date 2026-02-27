@@ -69,7 +69,7 @@
 		
 		$no=0; $trs=""; $total=$all=$sum=0;
 		$res = $db->query(2,"SELECT ln.branch,sd.idno,sd.officer,MIN(sd.day) AS dy,sd.loan,ln.balance,ln.client,ln.phone,ln.amount AS tloan,ln.expiry,SUM(sd.balance) AS tbal,ln.disbursement 
-		FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 AND sd.day BETWEEN '$from' AND '$to' $cond GROUP BY sd.loan ORDER BY sd.day,sd.balance DESC");
+		FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.id=sd.loan WHERE sd.balance>0 AND sd.day BETWEEN '$from' AND '$to' $cond GROUP BY sd.loan ORDER BY sd.day,sd.balance DESC");
 		if($res){
 			foreach($res as $row){
 				$idno=$row['idno']; $ofid=$row['officer']; $day=$row['dy']; $tbal=$row['balance']; $bal=fnum($row['tbal']);

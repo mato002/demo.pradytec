@@ -4,13 +4,14 @@
 	// When project is in demo.pradtec subfolder, use that path so login and redirects work
 	$scriptDir = str_replace("\\", "/", dirname($_SERVER['SCRIPT_NAME'] ?? ''));
 	$isDemoPradtec = (strpos($scriptDir, 'demo.pradtec') !== false);
-	$url = ($_SERVER['HTTP_HOST']=="localhost") ? ($isDemoPradtec ? "localhost/mfs/demo.pradtec" : "localhost/mfs") : $_SERVER['HTTP_HOST'];
-	$path = ($_SERVER['HTTP_HOST']=="localhost") ? ($isDemoPradtec ? "/mfs/demo.pradtec" : "/mfs") : "";
+	$isLocalhost = ($_SERVER['HTTP_HOST']=="localhost" || $_SERVER['HTTP_HOST']=="127.0.0.1:8000" || $_SERVER['SERVER_NAME']=="localhost" || $_SERVER['SERVER_NAME']=="127.0.0.1");
+	$url = $isLocalhost ? ($isDemoPradtec ? "localhost/demo.pradtec" : "localhost/mfs") : $_SERVER['HTTP_HOST'];
+	$path = $isLocalhost ? ($isDemoPradtec ? "/demo.pradtec" : "/mfs") : "";
 	$backbtn = "<i class='bi-arrow-left-circle' style='font-size:25px;cursor:pointer;float:left;margin-right:12px' onclick='window.history.back()'></i>";
 	
-	$db_names = ($_SERVER['HTTP_HOST']=="localhost") ? array(1=>'mfi_core',2=>'mfi_defined',3=>'mfi_accounts'):array(1=>'emptyjou_mficore',2=>'emptyjou_mfidefined','emptyjou_mfiaccounts');
-    $usernames = ($_SERVER['HTTP_HOST']=="localhost") ? array(1=>'root',2=>'root',3=>'root'):array(1=>'emptyjou_coreuser',2=>'emptyjou_defuser',3=>'emptyjou_accsuser');
-    $passwords = ($_SERVER['HTTP_HOST']=="localhost") ? array(1=>'',2=>'',3=>''):array(1=>'@coredb.g1',2=>'@defined.g2',3=>'@accounts.g3');
+	$db_names = $isLocalhost ? array(1=>'mfi_core',2=>'mfi_defined',3=>'mfi_accounts'):array(1=>'emptyjou_mficore',2=>'emptyjou_mfidefined','emptyjou_mfiaccounts');
+    $usernames = $isLocalhost ? array(1=>'root',2=>'root',3=>'root'):array(1=>'emptyjou_coreuser',2=>'emptyjou_defuser',3=>'emptyjou_accsuser');
+    $passwords = $isLocalhost ? array(1=>'',2=>'',3=>''):array(1=>'@coredb.g1',2=>'@defined.g2',3=>'@accounts.g3');
 	
 	define("CLIENT_ID",4);
 	define("DB_HOST","localhost");

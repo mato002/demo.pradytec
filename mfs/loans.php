@@ -718,7 +718,7 @@
 		
 		$no=($perpage*$page)-$perpage; $trs=$offs=$brns=""; $total=$all=$sum=0; $isport=($access=="portfolio") ? 1:0;
 		$res = $db->query(2,"SELECT ln.branch,sd.idno,sd.officer,MIN(sd.day) AS dy,sd.loan,ln.balance,ln.client,ln.phone,ln.amount AS tloan,ln.expiry,SUM(sd.balance) AS tbal,ln.disbursement 
-		FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 AND sd.day BETWEEN '$from' AND '$to' $cond GROUP BY sd.loan ORDER BY sd.day,sd.balance DESC $lim");
+		FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.id=sd.loan WHERE sd.balance>0 AND sd.day BETWEEN '$from' AND '$to' $cond GROUP BY sd.loan ORDER BY sd.day,sd.balance DESC $lim");
 		if($res){
 			foreach($res as $row){
 				$idno=$row['idno']; $ofid=$row['officer']; $day=$row['dy']; $tbal=$row['balance']; $bal=fnum($row['tbal']);
@@ -793,7 +793,7 @@
 		}
 		
 		$src = base64_encode($cond);
-		$sql = $db->query(2,"SELECT DISTINCT sd.loan,COUNT(*) AS total FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan 
+		$sql = $db->query(2,"SELECT DISTINCT sd.loan,COUNT(*) AS total FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.id=sd.loan 
 		WHERE sd.balance>0 AND sd.day BETWEEN '$from' AND '$to' $cond "); $totals = ($sql) ? $sql[0]['total']:0;
 		$prnt = ($totals) ? genrepDiv("arrears.php?src=$src&br=$bran&stid=$stid&ftc=$from:$to&v=$view",'right'):"";
 		
@@ -843,7 +843,7 @@
 		$tdy = strtotime(date("Y-M-d")); $all=$lis=[];
 		
 		$qri = $db->query(2,"SELECT sd.idno,sd.officer,MIN(sd.day) AS dy,sd.loan,ln.balance,ln.client,ln.phone,ln.amount AS tloan,ln.expiry,SUM(sd.balance) AS tbal FROM `$stbl` AS sd
-		INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 AND sd.day BETWEEN '$from' AND '$sto' $cond GROUP BY sd.loan ORDER BY sd.day,sd.balance");
+		INNER JOIN `$ltbl` AS ln ON ln.id=sd.loan WHERE sd.balance>0 AND sd.day BETWEEN '$from' AND '$sto' $cond GROUP BY sd.loan ORDER BY sd.day,sd.balance");
 		foreach($qri as $row){
 			$fon="254".$row['phone']; $amnt=$row['tbal']; $lid=$row['loan']; $name=$row['client'];
 			if(array_key_exists($fon,$lis)){ $lis[$fon]["amount"]+=$amnt; }

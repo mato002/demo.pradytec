@@ -103,8 +103,8 @@
 				$to=strtotime(date("Y-m-d",$leo-(86400*explode("-",$one)[0])));
 				
 				$qri = $db->query(2,"SELECT SUM(ln.balance) AS tbal,SUM((CASE WHEN (sd.day<$leo) THEN sd.balance ELSE 0 END)) AS pbal FROM `$ltbl` AS ln 
-				INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan WHERE sd.day BETWEEN $fro AND $to AND sd.balance>0 AND ln.balance>0 $cond");
-				$qry = $db->query(2,"SELECT ln.* FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan WHERE sd.day 
+				INNER JOIN `$stbl` AS sd ON ln.id=sd.loan WHERE sd.day BETWEEN $fro AND $to AND sd.balance>0 AND ln.balance>0 $cond");
+				$qry = $db->query(2,"SELECT ln.* FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.id=sd.loan WHERE sd.day 
 				BETWEEN $fro AND $to AND sd.balance>0 AND ln.balance>0 $cond GROUP BY sd.loan");
 				
 				if($qri[0]['pbal']){
@@ -124,7 +124,7 @@
 			}
 			
 			if($trs){
-				$res = $db->query(2,"SELECT SUM(ln.balance) AS tbal FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan 
+				$res = $db->query(2,"SELECT SUM(ln.balance) AS tbal FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.id=sd.loan 
 				WHERE ln.balance>0 AND sd.balance>0 AND sd.day<$leo $cond GROUP BY sd.loan"); 
 				$sum = array_sum(array_column($res, 'tbal')); $pval=number_format($sum); $par=($sum) ? round(($tdt/$sum)*100,2):0;
 				
@@ -372,7 +372,7 @@
 		$cond = ($me["access_level"]=="region" && isset($cnf["region"]) && !$bran) ? "AND ".setRegion($cnf["region"],"ln.branch"):$cond;
 		$cond.= ($ofid) ? " AND ln.loan_officer='$ofid'":"";
 		
-		$trs=$period=""; 
+		$trs=""; 
 		$ltbl = "org$cid"."_loans"; $stbl = "org$cid"."_schedule"; $ctbl = "org$cid"."_clients";
 		$res = $db->query(2,"SELECT *FROM `org".$cid."_staff`");
 		foreach($res as $row){
@@ -381,13 +381,13 @@
 		
 		$perpage = 40;
 		$lim = getLimit($page,$perpage);
-		$qri = $db->query(2,"SELECT *FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan WHERE sd.day BETWEEN $fro AND $to 
+		$qri = $db->query(2,"SELECT *FROM `$ltbl` AS ln INNER JOIN `$stbl` AS sd ON ln.id=sd.loan WHERE sd.day BETWEEN $fro AND $to 
 		AND sd.balance>0 AND ln.balance>0 $cond GROUP BY client_idno");
 		$totals = count($qri);
 		
 		$no = ($perpage*$page)-$perpage;
 		$qry = $db->query(2,"SELECT ln.*,cl.cycles,SUM((CASE WHEN (sd.day<=$to) THEN sd.balance ELSE 0 END)) AS arrs FROM `$ltbl` AS ln 
-		INNER JOIN `$stbl` AS sd ON ln.loan=sd.loan INNER JOIN `$ctbl` AS cl ON ln.client_idno=cl.idno WHERE sd.day BETWEEN $fro AND $to AND sd.balance>0 
+		INNER JOIN `$stbl` AS sd ON ln.id=sd.loan INNER JOIN `$ctbl` AS cl ON ln.client_idno=cl.idno WHERE sd.day BETWEEN $fro AND $to AND sd.balance>0 
 		AND ln.balance>0 $cond GROUP BY client_idno $lim");
 		foreach($qry as $row){
 			$name=prepare(ucwords($row['client'])); $cont=$row['phone']; $off=$staff[$row['loan_officer']]; $loan=number_format($row['amount']); 

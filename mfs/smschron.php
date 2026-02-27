@@ -33,15 +33,15 @@
 				$spec = (defined("SPECIAL_COLLECTION_PRODS")) ? SPECIAL_COLLECTION_PRODS:[]; $specs=[];
 				if($spec){
 					foreach($spec as $pid){
-						$qri = $db->query(2,"SELECT ln.phone,sd.balance FROM `org$cid"."_loans` AS ln INNER JOIN `org$cid"."_schedule` AS sd ON ln.loan=sd.loan WHERE sd.balance>0 
-						AND ln.loan_product='$pid' AND sd.day='".$idays[0]."'");
+						$qri = $db->query(2,"SELECT ln.phone,sd.balance FROM `org$cid"."_loans` AS ln INNER JOIN `org$cid"."_schedule` AS sd ON ln.id=sd.loan WHERE sd.balance>0 
+					AND ln.loan_product='$pid' AND sd.day='".$idays[0]."'");
 						if($qri){
 							foreach($qri as $row){ $specs[$row['phone']]=$row["balance"]; $conts[$row["phone"]]="254".$row['phone']; }
 						}
 					}
 				}
 				
-				$qri = $db->query(2,"SELECT ln.phone,ln.loan FROM `org$cid"."_schedule` AS sd INNER JOIN `org$cid"."_loans` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 AND sd.day='$day'");
+				$qri = $db->query(2,"SELECT ln.phone,ln.loan FROM `org$cid"."_schedule` AS sd INNER JOIN `org$cid"."_loans` AS ln ON ln.id=sd.loan WHERE sd.balance>0 AND sd.day='$day'");
 				if($qri){
 					foreach($qri as $row){
 						if($intrcol=="Cash"){ setInterest($row["loan"]); }

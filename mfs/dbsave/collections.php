@@ -62,7 +62,7 @@
 	if($type=="rep"){
 		$total=$paid=$no=$bals=0; $list=[]; $fro=explode("-",$day)[0]; $dto=explode("-",$day)[1]; $tdy=strtotime(date("Y-M-d"));
 		$res = $db->query(2,"SELECT sd.officer,sd.amount,sd.paid,sd.loan,sd.balance,ln.client,ln.phone,ln.branch,ln.client_idno,sd.day FROM `$stbl` AS sd 
-		INNER JOIN $ltbl AS ln ON ln.loan=sd.loan WHERE sd.day BETWEEN $fro AND $dto AND (ln.balance>0 or ln.status>$fro) $cond ORDER BY ln.client,sd.balance ASC");
+		INNER JOIN $ltbl AS ln ON ln.id=sd.loan WHERE sd.day BETWEEN $fro AND $dto AND (ln.balance>0 or ln.status>$fro) $cond ORDER BY ln.client,sd.balance ASC");
 		if($res){
 			foreach($res as $row){
 				$name=prepare(ucwords($row['client'])); $ofname=$staff[$row['officer']]; $fon=$row['phone']; $amnt=$row['amount']; $bal=$row['balance'];
@@ -105,11 +105,11 @@
 			foreach($res as $rw){
 				$def = $rw[$cfield]; $today=strtotime(date("Y-M-d")); $cond2=($cond) ? str_replace("AND ","AND ln.",$cond):"";
 				$sq1 = $db->query(2,"SELECT SUM(amount) AS tln,SUM(paid+balance) AS tsum FROM `$ltbl` WHERE `$cfield`='$def' AND `disbursement` BETWEEN $mon AND $dto $cond");
-				$sq2 = $db->query(2,"SELECT SUM(sd.balance) AS tarr FROM `$stbl` AS sd INNER JOIN `$ltbl` ON $ltbl.loan=sd.loan WHERE sd.balance>0 AND $ltbl.disbursement 
+				$sq2 = $db->query(2,"SELECT SUM(sd.balance) AS tarr FROM `$stbl` AS sd INNER JOIN `$ltbl` ON $ltbl.id=sd.loan WHERE sd.balance>0 AND $ltbl.disbursement 
 				BETWEEN $mon AND $dto AND sd.day<$today AND $cfield='$def' $cond");
 				$fork->add(2,"SELECT SUM(pr.amount) AS tsum,SUM((CASE WHEN (pr.day<=ln.expiry) THEN pr.amount ELSE 0 END)) AS otc,SUM((CASE WHEN (pr.day BETWEEN ln.expiry+(1) 
 				AND ln.expiry+(604800)) THEN pr.amount ELSE 0 END)) AS dd7,SUM((CASE WHEN (pr.day>ln.expiry+(604800)) THEN pr.amount ELSE 0 END)) AS cg7 FROM `$ltbl` AS ln STRAIGHT_JOIN 
-				`processed_payments$cid` AS pr ON pr.linked=ln.loan WHERE ln.$cfield='$def' AND ln.disbursement BETWEEN $mon AND $dto AND NOT pr.payment='Penalties' $cond2");
+				`processed_payments$cid` AS pr ON pr.linked=ln.id WHERE ln.$cfield='$def' AND ln.disbursement BETWEEN $mon AND $dto AND NOT pr.payment='Penalties' $cond2");
 				
 				$name = ($cfield=="branch") ? $bnames[$def]:$staff[$def]; 
 				$data[] = array("name"=>$name,"tln"=>$sq1[0]['tln'],"tpv"=>$sq1[0]['tsum'],"arr"=>$sq2[0]['tarr']);
@@ -154,7 +154,7 @@
 			foreach($res as $rw){
 				$def = $rw[$cfield]; $tdy=strtotime(date("Y-M-d"));
 				$sq1 = $db->query(2,"SELECT SUM(amount) AS tln,SUM(paid+balance) AS tsum,SUM(paid) AS tpd FROM `$ltbl` WHERE `$cfield`='$def' AND `disbursement` BETWEEN $dfro AND $dto $cond");
-				$sq2 = $db->query(2,"SELECT SUM(sd.balance) AS tarr FROM `$stbl` AS sd INNER JOIN `$ltbl` ON $ltbl.loan=sd.loan WHERE sd.balance>0 AND $ltbl.disbursement 
+				$sq2 = $db->query(2,"SELECT SUM(sd.balance) AS tarr FROM `$stbl` AS sd INNER JOIN `$ltbl` ON $ltbl.id=sd.loan WHERE sd.balance>0 AND $ltbl.disbursement 
 				BETWEEN $dfro AND $dto AND sd.day<$tdy AND $cfield='$def' $cond"); 
 				
 				$pv=$sq1[0]['tln']; $tpv=$sq1[0]['tsum']; $arr=$sq2[0]['tarr']; $tpd=$sq1[0]['tpd']; $tln+=$pv; $tpf+=$tpv; $tarr+=$arr; $tpds+=$tpd;
@@ -179,7 +179,7 @@
 	else{
 		$tdy=strtotime("Today"); $total=$paid=$no=$tcum=0; $trs="";
 		$res = $db->query(2,"SELECT sd.officer,sd.amount,sd.paid,sd.loan,sd.day,ln.client,ln.phone,ln.branch FROM `$stbl` AS sd 
-		INNER JOIN $ltbl AS ln ON ln.loan=sd.loan WHERE sd.day='$day' AND sd.balance>0 $cond ORDER BY ln.client,sd.balance ASC");
+		INNER JOIN $ltbl AS ln ON ln.id=sd.loan WHERE sd.day='$day' AND sd.balance>0 $cond ORDER BY ln.client,sd.balance ASC");
 		if($res){
 			foreach($res as $row){
 				$name=prepare(ucwords($row['client'])); $ofname=$staff[$row['officer']]; $amnt=fnum($row['amount']); $fon=$row['phone'];

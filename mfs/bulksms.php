@@ -142,8 +142,8 @@
 			$cond1 = ($stid) ? "AND ln.loan_officer='$stid'":$cond1;
 			
 			# weekdays groups
-			$res = $db->query(2,"SELECT ln.phone,from_unixtime(sd.day,'%W') AS dow FROM `org".$cid."_loans` AS ln INNER JOIN `org".$cid."_schedule` AS sd ON ln.loan=sd.loan 
-			WHERE ln.balance>0 $cond1  GROUP BY sd.loan,dow");
+			$res = $db->query(2,"SELECT ln.phone,from_unixtime(sd.day,'%W') AS dow FROM `org".$cid."_loans` AS ln INNER JOIN `org".$cid."_schedule` AS sd ON ln.id=sd.loan 
+			WHERE ln.balance>0 $cond1  GROUP BY sd.loan,dow ");
 			if($res){
 				foreach($res as $row){
 					$day = $row['dow']; $phone=$row['phone'];
@@ -157,7 +157,7 @@
 			}
 			
 			# default clients
-			$res = $db->query(2,"SELECT ln.phone FROM `org".$cid."_loans` AS ln INNER JOIN `org".$cid."_schedule` AS sd ON ln.loan=sd.loan 
+			$res = $db->query(2,"SELECT ln.phone FROM `org".$cid."_loans` AS ln INNER JOIN `org".$cid."_schedule` AS sd ON ln.id=sd.loan 
 			WHERE ln.balance>0 $cond1 AND sd.balance>0 AND ln.expiry<".strtotime(date("Y-M-d"))." GROUP BY sd.loan");
 			if($res){
 				foreach($res as $row){ $defs[]=$row['phone']; }

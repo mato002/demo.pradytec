@@ -261,13 +261,12 @@
 						$idnos[$cont] = $res[0]['client_idno'];
 					}
 					else{ $dels[$cont]=$cont; }
-				}
 			}
 			if(strpos($mssg,"AMOUNT")!==false){
 				foreach($conts as $cont){
 					$fon = ltrim($cont,"254"); $src=(isset($sms[$cont])) ? $sms[$cont]:$mssg;
 					$res = $db->query(2,"SELECT $field AS amnt,sd.idno FROM `org".$cid."_loans` AS ln INNER JOIN `org".$cid."_schedule` AS sd 
-					ON sd.loan=ln.loan WHERE ln.phone='$fon' AND sd.day='$day' AND sd.balance>0 AND ln.status='0'");
+					ON sd.loan=ln.id WHERE ln.phone='$fon' AND sd.day='$day' AND sd.balance>0 AND ln.status='0'");
 					if($res){
 						$sms[$cont] = str_replace("AMOUNT",fnum($res[0]['amnt']),$src);
 						if(!isset($idnos[$cont])){ $idnos[$cont] = $res[0]['idno']; }

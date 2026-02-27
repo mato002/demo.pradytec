@@ -865,9 +865,9 @@
 		
 		$res = $db->query(2,"SELECT SUM((CASE WHEN (sd.paid>(sd.amount-sd.interest)) THEN (sd.amount-sd.paid) ELSE sd.interest END)) AS intr,
 		SUM((CASE WHEN (sd.paid>(sd.amount-sd.interest)) THEN 0 ELSE (sd.amount-sd.paid-sd.interest) END)) AS princ FROM `$stbl` AS sd
-		INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 $cond");
+		INNER JOIN `$ltbl` AS ln ON ln.id=sd.loan WHERE sd.balance>0 $cond");
 		
-		$res1 = $db->query(2,"SELECT ln.loan FROM `$ltbl` AS ln INNER JOIN $stbl AS sd ON ln.loan=sd.loan WHERE sd.balance>0 $cond GROUP BY ln.loan");
+		$res1 = $db->query(2,"SELECT ln.id FROM `$ltbl` AS ln INNER JOIN $stbl AS sd ON ln.id=sd.loan WHERE sd.balance>0 $cond GROUP BY ln.id");
 		$princ = ($res) ? $res[0]['princ']:0; $intr = ($res) ? $res[0]['intr']:0; 
 		$tloans = ($res1) ? number_format(count($res1)):0; $totals=number_format($princ+$intr);
 		

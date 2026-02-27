@@ -55,7 +55,7 @@
 	}
 	
 	$res = ($istbl_loans) ? $db->query(2,"SELECT *,SUM(sd.amount) AS total,SUM(sd.paid) AS pays FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln
-	ON ln.loan=sd.loan WHERE sd.day='$leo' AND (ln.balance>0 or ln.status>$tdy) $cond"):null;
+	ON ln.id=CAST(sd.loan AS UNSIGNED) WHERE sd.day='$leo' AND (ln.balance>0 or ln.status>$tdy) $cond"):null;
 	if($res){
 		foreach($res as $row){ $pay+=$row['pays']; $amnts+=$row['total']; }
 	}
@@ -89,13 +89,17 @@
 	$lnpie = [["Task"=>"Client Loans"]]; $prodpie=[["Task"=>"Loan Products"]]; $brnpie=[["Task"=>"Branch Loans"]]; $arrears=$arrln=$aprc=$tprc=$par=0;
 	if($istbl_loans && in_array("view loans",$perms)){
 		$fork = new DBAsync($sid);
-		$qry = $db->query(2,"SELECT DISTINCT sd.loan FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 AND ln.balance>0 AND sd.day<$tdy $cond");
+		$qry = $db->query(2,"SELECT DISTINCT sd.loan FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.id=CAST(sd.loan AS UNSIGNED) WHERE sd.balance>0 AND ln.balance>0 AND sd.day<$tdy $cond");
 		$fork->add(2,"SELECT SUM(sd.balance) AS arrears,SUM((CASE WHEN (sd.paid>(sd.amount-sd.interest)) THEN 0 ELSE (sd.amount-sd.paid-sd.interest) END)) AS princ 
-		FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 AND sd.day<$tdy $cond");
+		FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.id=CAST(sd.loan AS UNSIGNED) WHERE sd.balance>0 AND sd.day<$tdy $cond");
 		$fork->add(2,"SELECT SUM((CASE WHEN (sd.paid>(sd.amount-sd.interest)) THEN 0 ELSE (sd.amount-sd.paid-sd.interest) END)) AS princ 
-		FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.loan=sd.loan WHERE sd.balance>0 $cond");
-		$res = $fork->run(); $arrears=intval($res[0][0]['arrears']); $aprc=intval($res[0][0]['princ']); $arrln=($qry) ? count($qry):0; 
-		$tprc = intval($res[1][0]['princ']); $par=($tprc) ? round(($aprc/$tprc)*100,2):0;
+		FROM `$stbl` AS sd INNER JOIN `$ltbl` AS ln ON ln.id=CAST(sd.loan AS UNSIGNED) WHERE sd.balance>0 $cond");
+		$res = $fork->run(); 
+		$arrears = (isset($res[0][0]['arrears'])) ? intval($res[0][0]['arrears']) : 0; 
+		$aprc = (isset($res[0][0]['princ'])) ? intval($res[0][0]['princ']) : 0; 
+		$arrln = ($qry) ? count($qry) : 0; 
+		$tprc = (isset($res[1][0]['princ'])) ? intval($res[1][0]['princ']) : 0; 
+		$par = ($tprc) ? round(($aprc/$tprc)*100,2) : 0;
 		
 		$qri = $db->query(2,"SELECT *,COUNT(id) AS total FROM `$ltbl` AS ln WHERE (balance+penalty)>0 $cond GROUP BY amount");
 		if($qri){
@@ -150,8 +154,8 @@
 	# loan analysis
 	$tundisb=$totundsb=$mtd=$ytd=$tmtd=$tytd=$tpv=$gcol=$otc=$otcp=$gcp=$tolb=$tnlb=0; $graph=[]; $pfdata=$dgtitle="";
 	if($db->istable(2,"org$cid"."_loantemplates") && $me["position"]!="collection agent"){
-		$sq1 = $db->query(2,"SELECT SUM(amount-(checkoff+prepay)) AS tsum,COUNT(id) AS tot FROM `org$cid"."_loantemplates` AS ln WHERE `status`<9 $cond");
-		$tundisb = ($sq1) ? intval($sq1[0]['tsum']):0; $totundsb=($sq1) ? intval($sq1[0]['tot']):0;
+		$sq1 = $db->query(2,"SELECT COUNT(id) AS tot FROM `org$cid"."_loantemplates` WHERE `status`<9 $cond");
+		$tundisb = ($sq1) ? 0 : 0; $totundsb = ($sq1) ? intval($sq1[0]['tot']) : 0;
 	}
 	
 	if($istbl_loans){
@@ -161,17 +165,17 @@
 		
 		if($me["position"]=="collection agent"){
 			$ljn = "INNER JOIN `org$cid"."_loans` AS ln ON lt.id=ln.tid";
-			$sq1 = $db->query(2,"SELECT SUM(lt.amount) AS tsum,COUNT(lt.id) AS tot FROM `org$cid"."_loantemplates` AS lt $ljn WHERE lt.status BETWEEN $jan1 AND $now $cond");
-			$sq2 = $db->query(2,"SELECT SUM(lt.amount) AS tsum,COUNT(lt.id) AS tot FROM `org$cid"."_loantemplates` AS lt $ljn WHERE lt.status BETWEEN $mon1 AND $now $cond");
+			$sq1 = $db->query(2,"SELECT COUNT(lt.id) AS tot FROM `org$cid"."_loantemplates` AS lt $ljn WHERE lt.status BETWEEN $jan1 AND $now $cond");
+			$sq2 = $db->query(2,"SELECT COUNT(lt.id) AS tot FROM `org$cid"."_loantemplates` AS lt $ljn WHERE lt.status BETWEEN $mon1 AND $now $cond");
 		}
 		else{
-			$sq1 = $db->query(2,"SELECT SUM(ln.amount) AS tsum,COUNT(ln.id) AS tot FROM `org$cid"."_loantemplates` AS ln WHERE ln.status BETWEEN $jan1 AND $now $cond");
-			$sq2 = $db->query(2,"SELECT SUM(ln.amount) AS tsum,COUNT(ln.id) AS tot FROM `org$cid"."_loantemplates` AS ln WHERE ln.status BETWEEN $mon1 AND $now $cond");
+			$sq1 = $db->query(2,"SELECT COUNT(ln.id) AS tot FROM `org$cid"."_loantemplates` AS ln WHERE ln.status BETWEEN $jan1 AND $now $cond");
+			$sq2 = $db->query(2,"SELECT COUNT(ln.id) AS tot FROM `org$cid"."_loantemplates` AS ln WHERE ln.status BETWEEN $mon1 AND $now $cond");
 		}
 		
 		$sq3 = $db->query(2,"SELECT SUM(balance+penalty) AS tsum,COUNT(id) AS tot FROM `$ltbl` AS ln WHERE (balance+penalty)>0 $cond");
-		$mtd = ($sq2) ? intval($sq2[0]['tsum']):0; $tolb=($sq3) ? intval($sq3[0]['tsum']):0; $tmtd=($sq2) ? intval($sq2[0]['tot']):0; 
-		$ytd = ($sq1) ? intval($sq1[0]['tsum']):0; $tytd=($sq1) ? intval($sq1[0]['tot']):0; $tnlb=($sq3) ? intval($sq3[0]['tot']):0; 
+		$mtd = ($sq2) ? intval($sq2[0]['tot']):0; $tolb=($sq3) ? intval($sq3[0]['tsum']):0; $tmtd=($sq2) ? intval($sq2[0]['tot']):0; 
+		$ytd = ($sq1) ? intval($sq1[0]['tot']):0; $tytd=($sq1) ? intval($sq1[0]['tot']):0; $tnlb=($sq3) ? intval($sq3[0]['tot']):0; 
 		$penon = ($sql) ? intval($sql[0]["tot"]):0; $activecl=($res2) ? intval($res2[0]["total"]):0; $ad1=$ad2=""; $ats=0;
 		
 		# disbursement analysis
